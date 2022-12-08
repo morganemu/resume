@@ -5,6 +5,7 @@ import { getTags } from "../functions/services/metaTagService";
 export default function Page({ story, preview, socialtags }) {
   story = useStoryblokState(story, { //Hook that connects the current page to the Storyblok Real Time visual editor. Needs information about the relations in order for the relations to be editable as well.
     resolveRelations: [
+      "person.experiences"
     ]
   }, preview);
 
